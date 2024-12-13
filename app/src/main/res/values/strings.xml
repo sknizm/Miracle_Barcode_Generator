@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Barcode Generator</string>
+    <string name="name">Name</string>
+    <string name="product_name">Product Name</string>
+    <string name="price">Price</string>
+    <string name="mrp">MRP</string>
+    <string name="no_text"> </string>
+    <string name="add_new_field">Add New Field</string>
+    <string name="add_new">Add New</string>
+    <string name="preview_barcode">Preview Barcode</string>
+</resources>

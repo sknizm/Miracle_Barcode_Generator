@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/previewBarcodeMain"
+    android:padding="@dimen/_10sdp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PreviewBarcodeActivity">
+<LinearLayout
+    android:layout_alignParentTop="true"
+    android:layout_width="match_parent"
+    android:id="@+id/previewSizeLayout"
+    android:layout_height="wrap_content">
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Width"
+            android:id="@+id/widthTextInput"
+            android:inputType="number"
+
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <TextView
+        android:layout_width="@dimen/_10sdp"
+        android:layout_height="match_parent"
+        android:background="@color/transparent"
+        />
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Height"
+            android:id="@+id/heightTextInput"
+            android:inputType="number"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+</LinearLayout>
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/getBarcode"
+        android:layout_below="@+id/previewSizeLayout"
+        android:text="Make Barcode"
+        android:layout_marginTop="@dimen/_20sdp"
+        />
+
+    <RelativeLayout
+        android:id="@+id/previewBarcodeLayout"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/getBarcode"
+        android:layout_height="@dimen/_200sdp">
+        <ImageView
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/previewBarcodeImageView"
+
+            />
+        <androidx.core.widget.ContentLoadingProgressBar
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            />
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_below="@+id/previewBarcodeLayout"
+        android:layout_width="match_parent"
+        android:id="@+id/printBarcodeLayout"
+        android:layout_height="wrap_content">
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Print Amount"
+                android:id="@+id/printTextInput"
+                android:inputType="number"
+
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <TextView
+            android:layout_width="@dimen/_10sdp"
+            android:layout_height="match_parent"
+            android:background="@color/transparent"
+            />
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/printBarcodeBtn"
+            android:layout_below="@+id/previewSizeLayout"
+            android:text="Make Barcode"
+            android:layout_weight="1"
+            />
+    </LinearLayout>
+</RelativeLayout>

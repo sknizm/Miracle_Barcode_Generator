@@ -1,0 +1,64 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+<RelativeLayout
+    android:layout_alignParentTop="true"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:id="@+id/navBarMain"
+    >
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="wrap_content"
+        android:layout_alignParentRight="true"
+        android:text="Remove All Fields"
+        android:id="@+id/removeAllFieldsBtn"
+        android:layout_height="wrap_content"/>
+</RelativeLayout>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_below="@+id/navBarMain"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+    <ScrollView
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/scrollViewMain"
+        >
+        <LinearLayout
+            android:padding="@dimen/_10sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textInputLinearLayout"
+            android:orientation="vertical"
+            >
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:padding="@dimen/_10sdp"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:text="@string/add_new"
+            android:id="@+id/addNewFieldBtn"
+            android:layout_height="wrap_content"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:text="@string/preview_barcode"
+            android:id="@+id/previewBarcodeBtn"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+</LinearLayout>
+
+
+</RelativeLayout>
